@@ -1,0 +1,13 @@
+#footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+}
+
+#footer small {
+    display: block;
+    padding: 15px;
+    background: #edf1f2;
+    text-align: center;
+    padding-right:200px
+}

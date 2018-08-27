@@ -1,0 +1,112 @@
+<!-- 
+  <div id="navbar">
+      <h3>导航条</h3>
+      <ul>
+          <li><router-link to="/app/demo">demo页</router-link> </li>
+          <li><router-link to="/app/hello">hello页</router-link></li>
+          <li><router-link :to="{name:'okay'}">OK页(默认test子页)</router-link></li>
+          <li><a  @click="tohello()">方法跳转hello页</a></router-link></li>
+          <li><router-link to="/app/okay/test">OK页+test子页</router-link></li>
+          <li><router-link :to="{path:'/okay/test'} ">OK页+test子页</router-link></li>
+          <li><router-link to="/okay/other">OK页+other子页</router-link></li>
+          <li><router-link :to="{name:'other'}" >OK页+other子页</router-link></li>
+         <li>
+            <router-link :to="{ path: '/okay/other', query: { id: '12345' }}" >other带参数</router-link>
+         </li>  
+     
+      </ul> 
+
+  </div> -->
+
+  <div class="navi bg-black">
+    <ul class="nav">
+        <li class="line dk"></li>
+        <li class="nav-li" >
+            <a  href="#/app/inquiry/inquiryReleaseManage" class="auto" @click="clearStorage()">
+                <span class="pull-right text-muted">
+                    <i class="glyphicon glyphicon-chevron-right text"></i>
+                    <i class="glyphicon glyphicon-chevron-down text-active"></i>
+                </span>
+                <i class="glyphicon glyphicon-usd icon text-info-dker"></i>
+                <span>询价</span>
+                <!-- <b class="badge bg-danger pull-right">{{total}}</b> -->
+            </a>
+
+            <ul class="nav nav-sub dk">
+                <li class="nav-li lamyManage">
+                    <a class="auto"  href="#/app/inquiry/inquiryReleaseManage"  @click="clearStorage()">
+                        <span>询价发布管理</span>
+                    </a>
+                </li>
+                <li class="nav-li">
+                    <a class="auto"  href="#/app/inquiry/inquiryManage"  @click="clearStorage()">
+                        <span>询价单管理</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-li" >
+            <a href="#/app/order/orderReleaseManage" class="auto"  @click="clearStorage()">
+                <span class="pull-right text-muted">
+                    <i class="glyphicon glyphicon-chevron-right text"></i>
+                    <i class="glyphicon glyphicon-chevron-down text-active"></i>
+                </span>
+                <i class="glyphicon glyphicon-duplicate icon text-info-dker"></i>
+                <span>发货</span>
+            </a>
+
+            <ul class="nav nav-sub dk">
+                <li class="nav-li lamyManage">
+                    <a class="auto" href="#/app/order/orderReleaseManage"  @click="clearStorage()">
+                        <span>订单发布管理</span>
+                    </a>
+                </li>
+                <li class="nav-li">
+                    <a class="auto" href="#/app/order/orderManage"  @click="clearStorage()">
+                        <span>订单管理</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-li">
+            <a href="#/app/Sumaccount" class="auto"  @click="clearStorage()">
+                <i class="glyphicon  glyphicon-sort icon text-info-dker"></i>
+                <span>财务对账</span>
+            </a>
+        </li>
+        <li class="nav-li" >
+            <a href="#/app/dataAnalysis" class="auto"  @click="clearStorage()">
+                <span class="pull-right text-muted">
+                    <i class="glyphicon glyphicon-chevron-right text"></i>
+                    <i class="glyphicon glyphicon-chevron-down text-active"></i>
+                </span>
+                <i class="glyphicon glyphicon-duplicate icon text-info-dker"></i>
+                <span>数据分析</span>
+            </a>
+            <ul class="nav nav-sub dk">
+                <li class="nav-li lamyManage">
+                    <a class="auto" href="#/app/dataAnalysis" @click="clearStorage()"> 
+                        <span>需求分析</span>
+                    </a>
+                </li>
+                <li class="nav-li">
+                    <a class="auto"  href="#/app/dataAnalysisCost"  @click="clearStorage()">
+                        <span>成本分析</span>
+                    </a>
+                </li>
+                <li class="nav-li">
+                    <a class="auto"  href="#/app/qualityWave"  @click="clearStorage()">
+                        <span>质量分析</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-li">
+            <a  href="#/app/userInfo" class="auto"  @click="clearStorage()">
+                <i class="glyphicon glyphicon-user icon text-info-dker"></i>
+                <span>个人设置</span>
+            </a>
+        </li>
+    </ul>
+
+</div>
