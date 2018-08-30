@@ -1,0 +1,58 @@
+#wxfooter {
+    background: #145fa6;
+    font-size: 0.8em;
+    position: fixed;
+    bottom: 0px;
+    z-index:1999999999;
+    width: 100%;
+    color:#666;
+}
+#wxfooter .weui-tabbar p{
+    margin:0;
+}
+
+#wxfooter .weui-tabbar__item.weui-bar__item--on .weui-tabbar__label {
+    color: #2DA1F4;
+}
+#wxfooter .zaitu{
+    background:url(/static/img/zaitu.png) no-repeat;
+    background-size:100%;
+}
+#wxfooter .shuju{
+    background:url(/static/img/shuju.png) no-repeat;
+    background-size:100%;
+}
+#wxfooter .xunjia{
+    background:url(/static/img/xunjia.png) no-repeat;
+    background-size:100%;
+}
+#wxfooter .dingdan{
+    background:url(/static/img/dingdan.png) no-repeat;
+    background-size:100%;
+}
+#wxfooter .wo{
+    background:url(/static/img/wo.png) no-repeat;
+    background-size:100%;
+}
+#wxfooter .weui-tabbar__item.weui-bar__item--on .zaitu {
+    background:url(/static/img/zaitu1.png) no-repeat;
+    background-size:100%;
+}
+#wxfooter .weui-tabbar__item.weui-bar__item--on .shuju {
+    background:url(/static/img/shuju1.png) no-repeat;
+    background-size:100%;
+}
+#wxfooter .weui-tabbar__item.weui-bar__item--on .xunjia {
+    background:url(/static/img/xunjia1.png) no-repeat;
+    background-size:100%;
+}
+#wxfooter .weui-tabbar__item.weui-bar__item--on .dingdan {
+    background:url(/static/img/dingdan1.png) no-repeat;
+    background-size:100%;
+}
+#wxfooter .weui-tabbar__item.weui-bar__item--on .wo {
+    background:url(/static/img/wo1.png) no-repeat;
+    background-size:100%;
+}
+
+

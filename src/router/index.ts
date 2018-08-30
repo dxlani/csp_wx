@@ -1,7 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import store from '../vuex/store'
+
 import Wxlogin from '../views/Wxlogin'
+import wechat from '../components/wechat'
+import onroad from '../views/onroad'
 
 declare var $:any;
 Vue.use(Router)
@@ -13,7 +16,7 @@ Vue.use(Router)
       path: '/',
       redirect: {
         name: 'Wxlogin'
-    }
+      }
     },
     {
       path: '/Wxlogin',
@@ -21,6 +24,21 @@ Vue.use(Router)
       component: Wxlogin,
       meta:{title: 'Wxlogin',requireAuth: false},
     },
+    {
+      path:'/wechat',
+      component: wechat,
+      children:[
+        {
+          path: '',
+          component: onroad,
+          // meta:{title: 'HomeComponent',requireAuth: true},
+        },
+        {
+          path: 'onroad',
+          component: onroad,
+        },
+      ]
+    }
   ],
      // mode:'history'   //去#号 需要服务器支持
       mode:'hash'   //默认
@@ -34,8 +52,8 @@ router.beforeEach((to, from, next) => {
           next({
               path: '/Wxlogin',
           });
-        
         } else {
+          next()
         }
           //路由钩子改标题
         if(to.meta.title){
@@ -45,12 +63,17 @@ router.beforeEach((to, from, next) => {
 })
 
 router.afterEach((to,from)=>{
-  // //登录页加背景图
-  // if(to.path=="/login"){
-  //   $('body').addClass('body-bg')
-  // }else{
-  //   $('body').removeClass('body-bg')
-  // }
+  console.log(to.path,from.path)
+  $('.ZT').addClass('weui-bar__item--on').siblings('a').removeClass('weui-bar__item--on');
+// else if(to.path.indexOf("wechat/WxdataAnalysis") != -1) {
+//   $('.SJ').addClass('weui-bar__item--on').siblings('a').removeClass('weui-bar__item--on');
+// }else if(to.path.indexOf("wechat/WxInquiryReleaseManage") != -1) {
+//   $('.XJ').addClass('weui-bar__item--on').siblings('a').removeClass('weui-bar__item--on');
+// }else if(to.path.indexOf("wechat/Wxorder") != -1) {
+//   $('.DD').addClass('weui-bar__item--on').siblings('a').removeClass('weui-bar__item--on');
+// }else if(to.path.indexOf("wechat/WxSetting") != -1) {
+//   $('.WO').addClass('weui-bar__item--on').siblings('a').removeClass('weui-bar__item--on');
+// }
 })
 
 export default router

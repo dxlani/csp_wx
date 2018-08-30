@@ -5,7 +5,7 @@
 import axios from 'axios'
 import store from '../vuex/store'
 import router from '../router'
-declare var bootbox: any;
+declare var $: any;
 const AUTH_TOKEN = "dingxiaolin"
 // axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
 
@@ -53,7 +53,7 @@ export let ax = axios.create({
 function host(): string {
     if (window.location.hostname == "localhost") {
         return "/csp"
-        // return "http://192.168.1.205:5000/csp/"
+        // return "http://192.168.1.107:5000/csp/"
     } else {
         return "/csp/"
     }
@@ -76,7 +76,7 @@ ax.interceptors.request.use(
 ax.interceptors.response.use(
     response => {
         if (!response.data.success) {
-            bootbox.alert(response.data.errorMessage)
+            $.alert(response.data.errorMessage)
         }
         return response.data;
 

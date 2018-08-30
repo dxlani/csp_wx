@@ -1,2 +1,0 @@
-import OrderReleaseManageComponent from './orderReleaseManage'
-export default OrderReleaseManageComponent

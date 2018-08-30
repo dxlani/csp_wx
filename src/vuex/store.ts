@@ -19,5 +19,4 @@ actions: {
 },
 
 })
-//if is logined define this token
 export default store
