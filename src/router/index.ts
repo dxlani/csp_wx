@@ -5,6 +5,7 @@ import store from '../vuex/store'
 import Wxlogin from '../views/Wxlogin'
 import wechat from '../components/wechat'
 import onroad from '../views/onroad'
+import wxInquiry from '../views/wxInquiry'
 
 declare var $:any;
 Vue.use(Router)
@@ -36,6 +37,10 @@ Vue.use(Router)
         {
           path: 'onroad',
           component: onroad,
+        },
+        {
+          path: 'wxInquiry',
+          component: wxInquiry,
         },
       ]
     }

@@ -4,6 +4,25 @@ declare var $:any;
   @Component({
     name: 'wxFooter',
     template: require('./wxFooter.html'),
+    watch: {
+    $route (newVal, oldVal) {
+      if (newVal.path == '/wechat/onroad') {
+        $('.ZT').addClass('weui-bar__item--on').siblings('a').removeClass('weui-bar__item--on');
+      }
+      if (newVal.path == '/wechat/wxInquiry') {
+        $('.XJ').addClass('weui-bar__item--on').siblings('a').removeClass('weui-bar__item--on');
+      }
+      if (newVal.path == '/wechat/WxdataAnalysis') {
+        $('.SJ').addClass('weui-bar__item--on').siblings('a').removeClass('weui-bar__item--on');
+      }
+      if (newVal.path == "/wechat/Wxorder") {
+        $('.DD').addClass('weui-bar__item--on').siblings('a').removeClass('weui-bar__item--on');
+      }
+      if (newVal.path == "/wechat/WxSetting") {
+        $('.WO').addClass('weui-bar__item--on').siblings('a').removeClass('weui-bar__item--on');
+      }
+    }
+  }
 })
 
 export default class wxFooter extends Vue {
@@ -18,7 +37,7 @@ export default class wxFooter extends Vue {
     if (location.href.indexOf("wechat/WxdataAnalysis") != -1) {
         $('.SJ').addClass('weui-bar__item--on').siblings('a').removeClass('weui-bar__item--on');
     }
-    if (location.href.indexOf("wechat/WxInquiryReleaseManage") != -1) {
+    if (location.href.indexOf("wechat/wxInquiry") != -1) {
         $('.XJ').addClass('weui-bar__item--on').siblings('a').removeClass('weui-bar__item--on');
     }
     if (location.href.indexOf("wechat/Wxorder") != -1) {
